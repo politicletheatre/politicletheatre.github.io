@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>กำลังไปยังหน้าจองบัตร...</title>
+  <script>
+    (function() {
+      var pathname = window.location.pathname || '';
+      // If someone accesses old capitalized /Ticket or /Ticket/...
+      if (pathname.indexOf('/Ticket') === 0) {
+        var lowerPath = pathname.replace(/^\/Ticket/, '/ticket');
+        window.location.replace('https://politicletheatre.github.io' + lowerPath + window.location.search + window.location.hash);
+        return;
+      }
+      // Otherwise redirect to root home
+      window.location.replace('https://politicletheatre.github.io/');
+    })();
+  </script>
+</head>
+<body style="font-family:sans-serif;text-align:center;padding:50px;background:#08080a;color:#ffffff;">
+  <h2>🎭 กำลังนำท่านไปยังหน้าจองบัตร...</h2>
+  <p>หากระบบไม่เปลี่ยนหน้าอัตโนมัติ กรุณาคลิก <a href="https://politicletheatre.github.io/ticket/" style="color:#ff6b60;text-decoration:underline;">ที่นี่</a></p>
+</body>
+</html>
