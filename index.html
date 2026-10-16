@@ -94,7 +94,7 @@
         <div class="countdown-widget" onclick="window.location.href='https://politicletheatre.github.io/Ticket/?view=ticket'" role="button" tabindex="0" title="คลิกเพื่อจองบัตร">
           <div class="countdown-header">
             <span class="countdown-pulse-dot"></span>
-            <span class="countdown-title">น่าจะซื้อตอนนี้ตั้งแต่ PRO 6 ตุลา</span>
+            <span class="countdown-title">น่าจะซื้อตอนนี้ก่อนจบการแสดง</span>
           </div>
           <div class="countdown-board">
             <div class="countdown-col">
@@ -1363,7 +1363,7 @@
       initHomeCountdown();
     });
 
-    // Digital Countdown Timer for PRO 6 ตุลา
+    // Digital Countdown Timer (น่าจะซื้อตอนนี้ก่อนจบการแสดง)
     function initHomeCountdown() {
       const daysEl = document.getElementById('preview-cd-days');
       const hoursEl = document.getElementById('preview-cd-hours');
@@ -1374,8 +1374,8 @@
       function update() {
         const now = new Date();
         const currentYear = now.getFullYear();
-        // Target: เที่ยงคืนวันที่ 9 ตุลาคม (สิ้นสุด 8 ตุลาคม 23:59:59 GMT+7) (month 9 is October)
-        const target = new Date(currentYear, 9, 9, 0, 0, 0, 0);
+        // Target: สิ้นสุดวันที่ 25 ตุลาคม เวลา 22:00 (GMT+7)
+        const target = new Date(`${currentYear}-10-25T22:00:00+07:00`);
 
         let diff = target.getTime() - now.getTime();
         if (diff < 0) diff = 0;
