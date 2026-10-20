@@ -1197,8 +1197,9 @@ html[lang="th"] .lang-en {
 
 /* Production Team & Acknowledgements in Current Show Preview */
 .hero-preview-team {
-  margin-top: 24px;
-  padding-top: 20px;
+  margin-top: 20px;
+  margin-bottom: 24px;
+  padding-top: 16px;
   border-top: 1px dashed rgba(40, 107, 110, 0.35);
 }
 
@@ -1232,6 +1233,34 @@ html[lang="th"] .lang-en {
 .preview-team-list strong {
   color: #286b6e;
   font-weight: 700;
+}
+
+.hero-preview-team .crew-summary {
+  background: rgba(40, 107, 110, 0.08);
+  border: 1px solid rgba(40, 107, 110, 0.25);
+  color: #286b6e;
+  font-weight: 600;
+  font-size: 0.85rem;
+  opacity: 1;
+}
+
+.hero-preview-team .crew-summary:hover {
+  background: rgba(200, 62, 41, 0.12);
+  border-color: #c83e29;
+  color: #c83e29;
+  text-shadow: none;
+}
+
+.hero-preview-team .additional-crew-details[open] .crew-summary {
+  color: #57534e;
+  border-color: rgba(40, 107, 110, 0.2);
+  opacity: 0.85;
+}
+
+.hero-preview-team .additional-crew-details[open] .crew-summary:hover {
+  color: #c83e29;
+  border-color: #c83e29;
+  opacity: 1;
 }
 
 .preview-thanks-item {
